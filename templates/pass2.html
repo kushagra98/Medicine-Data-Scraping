@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="proj2.css">
+    <script src="proj2.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #ddd;
+    }
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+    .tab button:hover {
+      background-color: white;
+    }
+    .tab button.active {
+      background-color: #ccc;
+    }
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    </style>
+    <script type="text/javascript">
+      function openevent(evt, evntName) {
+
+      var i, tabcontent, tablinks;
+      
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(evntName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+</head>
+
+<body>
+            <div class="tab">
+                    <button class="tablinks active" onclick="openevent(event, 'uses')"><b>Uses</b></button>
+                    <button class="tablinks" onclick="openevent(event, 'warning')"><b>Warnings</b></button>
+                    <button class="tablinks" onclick="openevent(event, 'interactions')"><b>Interactions</b></button>
+                    <button class="tablinks" onclick="openevent(event, 'direction')"><b>Direction</b></button>
+                    <button class="tablinks" onclick="openevent(event, 'sideeffects')"><b>Side Effects</b></button>
+                    <button class="tablinks" onclick="openevent(event, 'more')"><b>More</b></button>
+            </div>
+                  <div id="uses" class="tabcontent" style="display: block;">
+                      <ul>
+                        {% for i in uses %}
+                          <li>{{i}}</li>
+                        {% endfor %}
+                      </ul>
+                  </div>
+                  <div id="warning" class="tabcontent">
+                        <ul>
+                                {% for i in warnings %}
+                                    <li>{{i}}</li>
+                                {% endfor %}
+                                
+                            </ul>
+                      
+                  </div>
+                  
+                  <div id="interactions" class="tabcontent">
+                        <ul>
+                            {% for i in interactions %}
+                                <li>{{i}}</li>
+                            {% endfor %}
+                        </ul>
+                         
+                  </div>
+                  <div id="direction" class="tabcontent">
+                        <ul>
+                            {% for i in directions %}
+                              <li>{{i}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div id="sideeffects" class="tabcontent">
+                          <ul>
+                            {% for i in side %}
+                              <li>{{i}}</li>
+                            {% endfor %}
+                          </ul>
+                        
+                    </div>
+                    
+                    <div id="more" class="tabcontent">
+                          <ul>
+                            {% for i in more %}
+                              <li>{{i}}</li>
+                            {% endfor %}  
+                          </ul>
+                           
+                    </div>
+    </body>
+
+
+
+
+
+
+
+<!-- <body>
+    
+
+
+
+
+    <h2>{{uses}}</h2>
+    <h2>{{warnings}}</h2>
+    <h2>{{interactions}}</h2>
+    <h2>{{directions}}</h2>
+    <h2>{{side}}</h2>
+    <h2>{{more}}</h2>
+</body> -->
+</html>

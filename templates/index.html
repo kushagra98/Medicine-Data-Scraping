@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #text{
+        width: 99%;
+        padding: 12px 3px 12px 3px;
+        font-size: 16px;
+        margin: 1px 3px 12px 3px;
+        }
+        #search{
+        width: 99%;
+        padding: 12px 3px 12px 3px;
+        font-size: 16px;
+        margin: 1px 3px 12px 3px;
+       /* border: 1px solid #ddd;*/
+        }
+        input[type=text]:focus{
+        background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <form name = "passData" action="/index" method="post">
+        <label>Enter Name of Medicine</label>
+        <input type = "text" name = "name" placeholder="Enter the name of medicine to search..." id="text">
+        <input type="submit" value="submit" id="search">
+    </form>
+</body>
+</html>

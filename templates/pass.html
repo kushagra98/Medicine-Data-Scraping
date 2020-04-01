@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pass</title>
+    <style>
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          background-color:white ;
+          padding: 10px;
+        }
+        .grid-item {
+          background-color: beige;
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 20px;
+          text-align: center;
+        }
+        </style>
+</head>
+
+<body>
+    <form name = "passData" action="/pass"  method="post" id="nameform">
+        <div class="grid-container">
+            {% for i in range(0,len) %}
+            <button type="submit" name = "name" value = {{links[i]}}> 
+                    <div class="grid-item">
+            <img src={{imgs[i]}}>
+            <p align="center">{{names[i]}}</p>
+                    </div>
+            </button>
+        {% endfor %}
+        </div>
+        
+    </form>
+    
+    
+    
+    <!-- <ul>
+        {% for i in range(0,len) %}
+            <li><img src={{imgs[i]}}><h1>{{names[i]}}</h1></li>
+        {% endfor %}
+    </ul> -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+#text{
+    width: 99%;
+    padding: 12px 3px 12px 3px;
+    font-size: 16px;
+    margin: 1px 3px 12px 3px;
+}
+#search{
+    width: 99%;
+    padding: 12px 3px 12px 3px;
+    font-size: 16px;
+    margin: 1px 3px 12px 3px;
+   /* border: 1px solid #ddd;*/
+}
+input[type=text]:focus{
+    background-color: beige;
+}

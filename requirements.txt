@@ -1,0 +1,6 @@
+flask 
+flask_sqlalchemy
+bs4
+selenium
+requests
+time
